@@ -7,9 +7,8 @@ export const selectAllMovies = createSelector(
   (movieSlice) => movieSlice.movies
 );
 
-const selectFilter = (state) => state.filter;
 
-export const filterMovies = createSelector(
-  [selectFilter],
-  (filter) => filter.filteredMovies
+export const filterNewMovies = createSelector(
+  [selectMovies],
+  (movieSlice) => movieSlice.filteredMovies
 );

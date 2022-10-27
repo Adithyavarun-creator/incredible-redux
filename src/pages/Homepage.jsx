@@ -13,36 +13,16 @@ import Search from "../components/Search/Search";
 import MovieCard from "../components/MovieCard/MovieCard";
 import Header from "../components/Header/Header";
 import { useSelector } from "react-redux";
-import { selectAllMovies } from "../store/movies/moviesSelector";
+import {
+  selectAllMovies,
+  filterNewMovies,
+} from "../store/movies/moviesSelector";
 
 const Homepage = () => {
-  const allMovies = useSelector(selectAllMovies);
+  const allMovies = useSelector(filterNewMovies);
   //console.log(allMovies);
 
   const [search, setSearch] = useState("");
-
-  const [movies, setMovies] = useState(allMovies);
-
-  const filterItem = (category) => {
-    const newMovies = movies.filter((movie) => {
-      return movie.category === category;
-    });
-    setMovies(newMovies);
-  };
-
-  const filterRating = (rating) => {
-    const newMovies = movies.filter((movie) => {
-      return Number(movie.rating) === Number(rating);
-    });
-    setMovies(newMovies);
-  };
-
-  const filterReleaseYear = (year) => {
-    const newMovies = movies.filter((movie) => {
-      return Number(movie.releaseYear) === Number(year);
-    });
-    setMovies(newMovies);
-  };
 
   return (
     <>
@@ -54,15 +34,15 @@ const Homepage = () => {
         <FeatureBox>
           <Search setSearch={setSearch} search={search} />
 
-          <Filter allMovies={allMovies} filterItem={filterItem} />
+          <Filter allMovies={movies} />
 
-          <Ratings filterRating={filterRating} />
+          <Ratings allMovies={movies} />
 
-          <ReleaseYear filterReleaseYear={filterReleaseYear} />
+          <ReleaseYear allMovies={movies} />
         </FeatureBox>
 
         <MovieContainer>
-          {movies
+          {allMovies
             .filter((result) => {
               if (search === "") {
                 return result;

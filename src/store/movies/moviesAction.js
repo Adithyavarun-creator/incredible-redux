@@ -2,9 +2,21 @@ import { createAction } from "../utils/reducer";
 import { MovieActionTypes } from "./moviesTypes";
 
 const filterItem = (movies, category) => {
-  const newMovies = movies.filter((movie) => {
-    return movie.category === category;
-  });
+  const newMovies = movies.filter((movie) => movie.category === category);
+  return newMovies;
+};
+
+const filterRatings = (movies, rating) => {
+  const newMovies = movies.filter(
+    (movie) => Number(movie.rating) === Number(rating)
+  );
+  return newMovies;
+};
+
+const filterYear = (movies, yearLook) => {
+  const newMovies = movies.filter(
+    (movie) => Number(movie.year) === Number(yearLook)
+  );
   return newMovies;
 };
 
@@ -16,5 +28,15 @@ export const getMovie = (movie) =>
 
 export const myFilter = (movies, category) => {
   const all = filterItem(movies, category);
-  createAction(MovieActionTypes.FILTER_MOVIE_RATING, all);
+  return createAction(MovieActionTypes.FILTER_MOVIE, all);
+};
+
+export const myRatings = (movies, rating) => {
+  const all = filterRatings(movies, rating);
+  return createAction(MovieActionTypes.FILTER_RATING, all);
+};
+
+export const myYear = (movies, year) => {
+  const all = filterYear(movies, year);
+  return createAction(MovieActionTypes.FILTER_YEAR, all);
 };

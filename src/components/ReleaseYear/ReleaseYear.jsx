@@ -1,21 +1,21 @@
 import React from "react";
+import { useDispatch } from "react-redux";
+import { myYear } from "../../store/movies/moviesAction";
 import { ReleaseContainer, ReleaseButton } from "../../styles/ReleaseYear";
 
-const ReleaseYear = ({ filterReleaseYear }) => {
+const ReleaseYear = ({ allMovies }) => {
+  const dispatch = useDispatch();
+
+  const clickYear = (year) => {
+    dispatch(myYear(allMovies, year));
+  };
+
   return (
     <ReleaseContainer>
-      <ReleaseButton onClick={() => filterReleaseYear(2000)}>
-        2000
-      </ReleaseButton>
-      <ReleaseButton onClick={() => filterReleaseYear(2010)}>
-        2001
-      </ReleaseButton>
-      <ReleaseButton onClick={() => filterReleaseYear(2015)}>
-        2003
-      </ReleaseButton>
-      <ReleaseButton onClick={() => filterReleaseYear(2020)}>
-        2004
-      </ReleaseButton>
+      <ReleaseButton onClick={() => clickYear(2000)}>2000</ReleaseButton>
+      <ReleaseButton onClick={() => clickYear(2010)}>2010</ReleaseButton>
+      <ReleaseButton onClick={() => clickYear(2015)}>2015</ReleaseButton>
+      <ReleaseButton onClick={() => clickYear(2020)}>2020</ReleaseButton>
     </ReleaseContainer>
   );
 };

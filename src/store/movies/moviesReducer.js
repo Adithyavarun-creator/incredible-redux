@@ -3,7 +3,7 @@ import { MovieActionTypes } from "./moviesTypes";
 
 export const MOVIES_INITIAL_STATE = {
   movies: movies,
-  filteredMovies: [],
+  filteredMovies: movies,
 };
 
 export const moviesReducer = (state = MOVIES_INITIAL_STATE, action) => {
@@ -15,21 +15,22 @@ export const moviesReducer = (state = MOVIES_INITIAL_STATE, action) => {
         ...state,
         movies: payload,
       };
-
-    default:
-      return state;
-  }
-};
-
-export const filterReducer = (state = MOVIES_INITIAL_STATE, action) => {
-  const { type, payload } = action;
-
-  switch (type) {
-    case MovieActionTypes.FILTER_MOVIE_RATING:
+    case MovieActionTypes.FILTER_MOVIE:
       return {
         ...state,
         filteredMovies: payload,
       };
+    case MovieActionTypes.FILTER_RATING:
+      return {
+        ...state,
+        filteredMovies: payload,
+      };
+
+    // case MovieActionTypes.FILTER_YEAR:
+    //   return {
+    //     ...state,
+    //     filteredMovies: payload,
+    //   };
 
     default:
       return state;
