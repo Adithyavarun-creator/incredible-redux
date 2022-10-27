@@ -25,7 +25,6 @@ const composedEnhancer =
     window &&
     window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__) ||
   compose;
-//const composedEnhancers = compose(applyMiddleware(...middlewares));
 const composedEnhancers = composedEnhancer(applyMiddleware(...middlewares));
 
 export const store = createStore(
