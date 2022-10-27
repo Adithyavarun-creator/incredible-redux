@@ -13,14 +13,10 @@ import Search from "../components/Search/Search";
 import MovieCard from "../components/MovieCard/MovieCard";
 import Header from "../components/Header/Header";
 import { useSelector } from "react-redux";
-import {
-  selectAllMovies,
-  filterNewMovies,
-} from "../store/movies/moviesSelector";
+import { filterNewMovies } from "../store/movies/moviesSelector";
 
 const Homepage = () => {
   const allMovies = useSelector(filterNewMovies);
-  //console.log(allMovies);
 
   const [search, setSearch] = useState("");
 
