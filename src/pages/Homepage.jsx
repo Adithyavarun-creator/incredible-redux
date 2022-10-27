@@ -12,73 +12,74 @@ import {
 import Search from "../components/Search/Search";
 import MovieCard from "../components/MovieCard/MovieCard";
 import Header from "../components/Header/Header";
+import { useSelector } from "react-redux";
+import { selectAllMovies } from "../store/movies/moviesSelector";
 
 const Homepage = () => {
-  const [moviesList, setMoviesList] = useState(movies);
+  const allMovies = useSelector(selectAllMovies);
+  //console.log(allMovies);
+
   const [search, setSearch] = useState("");
+
+  const [movies, setMovies] = useState(allMovies);
 
   const filterItem = (category) => {
     const newMovies = movies.filter((movie) => {
       return movie.category === category;
     });
-
-    setMoviesList(newMovies);
+    setMovies(newMovies);
   };
 
   const filterRating = (rating) => {
     const newMovies = movies.filter((movie) => {
       return Number(movie.rating) === Number(rating);
     });
-
-    setMoviesList(newMovies);
+    setMovies(newMovies);
   };
 
   const filterReleaseYear = (year) => {
     const newMovies = movies.filter((movie) => {
       return Number(movie.releaseYear) === Number(year);
     });
-
-    setMoviesList(newMovies);
+    setMovies(newMovies);
   };
 
   return (
-    <HomeContainer>
-      <Header title="Incredible Task Movies" />
-      <HeaderSubtitle>
-        Want to watch movies ! Scroll Below for Free Access
-      </HeaderSubtitle>
-      <FeatureBox>
-        <Search setSearch={setSearch} search={search} />
+    <>
+      <HomeContainer>
+        <Header title="Incredible Task Movies" />
+        <HeaderSubtitle>
+          Want to watch movies ! Scroll Below for Free Access
+        </HeaderSubtitle>
+        <FeatureBox>
+          <Search setSearch={setSearch} search={search} />
 
-        <Filter
-          filterItem={filterItem}
-          movies={movies}
-          setMoviesList={setMoviesList}
-        />
+          <Filter allMovies={allMovies} filterItem={filterItem} />
 
-        <Ratings filterRating={filterRating} />
+          <Ratings filterRating={filterRating} />
 
-        <ReleaseYear filterReleaseYear={filterReleaseYear} />
-      </FeatureBox>
+          <ReleaseYear filterReleaseYear={filterReleaseYear} />
+        </FeatureBox>
 
-      <MovieContainer>
-        {moviesList
-          .filter((result) => {
-            if (search === "") {
-              return result;
-            } else if (
-              result.name.toLowerCase().includes(search.toLowerCase()) ||
-              result.category.toLowerCase().includes(search.toLowerCase()) ||
-              result.releaseYear.toLowerCase().includes(search.toLowerCase())
-            ) {
-              return result;
-            }
-          })
-          .map((movie) => (
-            <MovieCard key={movie.id} movie={movie} />
-          ))}
-      </MovieContainer>
-    </HomeContainer>
+        <MovieContainer>
+          {movies
+            .filter((result) => {
+              if (search === "") {
+                return result;
+              } else if (
+                result.name.toLowerCase().includes(search.toLowerCase()) ||
+                result.category.toLowerCase().includes(search.toLowerCase()) ||
+                result.releaseYear.toLowerCase().includes(search.toLowerCase())
+              ) {
+                return result;
+              }
+            })
+            .map((movie) => (
+              <MovieCard key={movie.id} movie={movie} />
+            ))}
+        </MovieContainer>
+      </HomeContainer>
+    </>
   );
 };
 

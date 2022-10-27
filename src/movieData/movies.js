@@ -5,7 +5,7 @@ export const movies = [
     category: "Action",
     rating: "4.1",
     releaseYear: "2000",
-    videoLink: "https://www.youtube.com/watch?v=RzVvThhjAKw",
+    videoLink: "https://www.youtube.com/watch?v=JfVOs4VSpmA",
     coverImage:
       "https://i0.wp.com/batman-news.com/wp-content/uploads/2021/12/Black-Adam-Total-Film-Cover-02.jpg?quality=80&strip=info&ssl=1",
     description:
@@ -13,14 +13,13 @@ export const movies = [
   },
   {
     id: 2,
-    name: "Spiderman : No Way Home",
+    name: "No Way Home",
     category: "Action",
     rating: "4.2",
     releaseYear: "2000",
-    videoLink: "https://www.youtube.com/watch?v=RzVvThhjAKw",
-
+    videoLink: "https://www.youtube.com/watch?v=JfVOs4VSpmA",
     coverImage:
-      "https://www.themoviedb.org/t/p/original/uJYYizSuA9Y3DCs0qS4qWvHfZg4.jpg",
+      "https://sm.ign.com/ign_ap/gallery/s/spider-man/spider-man-no-way-home-villain-posters_u72a.jpg",
     description:
       "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae deleniti saepe dolor unde, tenetur quia amet aliquam sit commodi explicabo hic aspernatur id pariatur ipsum sequi. Minus qui vero similique dignissimos quamvoluptatibus, beatae odit numquam reiciendis blanditiis labore quo pariatur expedita nesciunt, doloremque sequi consequuntur ipsam repellendus est hic accusantium corporis commodi quae iste. Eos in natus esse hic ab iste odio rerum inventore reiciendis iusto harum dolor nobis optio facere eaque minus, veritatis quas nulla, pariatur eligendi officiis? Totam id repellendus debitis assumenda dolores autem iste incidunt voluptatibus corrupti similique atquefuga, sapiente quos esse voluptate, mollitia rem",
   },
@@ -30,8 +29,7 @@ export const movies = [
     category: "Action",
     rating: "4.3",
     releaseYear: "2000",
-    videoLink: "https://www.youtube.com/watch?v=RzVvThhjAKw",
-
+    videoLink: "https://www.youtube.com/watch?v=JfVOs4VSpmA",
     coverImage:
       "https://m.media-amazon.com/images/M/MV5BMTUxNzUwMjk1Nl5BMl5BanBnXkFtZTgwNDkwODI1MjI@._V1_.jpg",
     description:
@@ -43,7 +41,7 @@ export const movies = [
     category: "Action",
     rating: "5",
     releaseYear: "2000",
-    videoLink: "https://www.youtube.com/watch?v=RzVvThhjAKw",
+    videoLink: "https://www.youtube.com/watch?v=JfVOs4VSpmA",
     coverImage:
       "https://hips.hearstapps.com/hmg-prod/images/hobbs-and-shaw-1623700324.jpeg?resize=480:*",
     description:
@@ -55,6 +53,7 @@ export const movies = [
     category: "Action",
     rating: "4.1",
     releaseYear: "2000",
+    videoLink: "https://www.youtube.com/watch?v=JfVOs4VSpmA",
     coverImage:
       "https://resizing.flixster.com/0xxuABVVuzJrUT130WFHKE-irEg=/ems.cHJkLWVtcy1hc3NldHMvdHZzZWFzb24vNzUyMTFhOTktZTU4Ni00ODkyLWJlYjQtZTgxYTllZmU2OGM0LmpwZw==",
     description:
@@ -66,8 +65,7 @@ export const movies = [
     category: "Comedy",
     rating: "4.3",
     releaseYear: "2010",
-    videoLink: "https://www.youtube.com/watch?v=RzVvThhjAKw",
-
+    videoLink: "https://www.youtube.com/watch?v=JfVOs4VSpmA",
     coverImage:
       "https://www.themoviedb.org/t/p/original/gLhHHZUzeseRXShoDyC4VqLgsNv.jpg",
     description:
@@ -79,8 +77,7 @@ export const movies = [
     category: "Comedy",
     rating: "4.9",
     releaseYear: "2010",
-    videoLink: "https://www.youtube.com/watch?v=RzVvThhjAKw",
-
+    videoLink: "https://www.youtube.com/watch?v=JfVOs4VSpmA",
     coverImage:
       "https://i.pinimg.com/originals/0d/d4/e9/0dd4e99e3871f276107f5bb14540bb00.jpg",
     description:
@@ -92,8 +89,7 @@ export const movies = [
     category: "Comedy",
     rating: "4.1",
     releaseYear: "2010",
-    videoLink: "https://www.youtube.com/watch?v=RzVvThhjAKw",
-
+    videoLink: "https://www.youtube.com/watch?v=JfVOs4VSpmA",
     coverImage:
       "https://stat1.bollywoodhungama.in/wp-content/uploads/2020/01/Fast-And-Furious-9-The-Fast-Saga-English.jpg",
     description:
@@ -105,8 +101,7 @@ export const movies = [
     category: "Comedy",
     rating: "4.1",
     releaseYear: "2010",
-    videoLink: "https://www.youtube.com/watch?v=RzVvThhjAKw",
-
+    videoLink: "https://www.youtube.com/watch?v=JfVOs4VSpmA",
     coverImage:
       "https://rukminim1.flixcart.com/image/312/312/l0sgyvk0/poster/x/u/e/large-the-dark-knight-rises-batman-poster-poster-print-on-36x24-original-imagcg87gzthmzkc.jpeg?q=70",
     description:
@@ -118,7 +113,7 @@ export const movies = [
     category: "Thriller",
     rating: "4.2",
     releaseYear: "2010",
-    videoLink: "https://www.youtube.com/watch?v=RzVvThhjAKw",
+    videoLink: "https://www.youtube.com/watch?v=JfVOs4VSpmA",
 
     coverImage:
       "https://rukminim1.flixcart.com/image/416/416/k8xduvk0/poster/j/m/z/medium-the-dark-knight-poster-decorative-wall-poster-wall-d-cor-original-imafqu8evqxuvfvg.jpeg?q=70",
@@ -131,7 +126,7 @@ export const movies = [
     category: "Thriller",
     rating: "4.3",
     releaseYear: "2015",
-    videoLink: "https://www.youtube.com/watch?v=RzVvThhjAKw",
+    videoLink: "https://www.youtube.com/watch?v=JfVOs4VSpmA",
 
     coverImage: "https://img.fruugo.com/product/6/31/14366316_max.jpg",
     description:
@@ -143,20 +138,18 @@ export const movies = [
     category: "Thriller",
     rating: "4.9",
     releaseYear: "2015",
-    videoLink: "https://www.youtube.com/watch?v=RzVvThhjAKw",
-
+    videoLink: "https://www.youtube.com/watch?v=JfVOs4VSpmA",
     coverImage: "https://m.media-amazon.com/images/I/71sad4REOhL._SL1500_.jpg",
     description:
       "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae deleniti saepe dolor unde, tenetur quia amet aliquam sit commodi explicabo hic aspernatur id pariatur ipsum sequi. Minus qui vero similique dignissimos quamvoluptatibus, beatae odit numquam reiciendis blanditiis labore quo pariatur expedita nesciunt, doloremque sequi consequuntur ipsam repellendus est hic accusantium corporis commodi quae iste. Eos in natus esse hic ab iste odio rerum inventore reiciendis iusto harum dolor nobis optio facere eaque minus, veritatis quas nulla, pariatur eligendi officiis? Totam id repellendus debitis assumenda dolores autem iste incidunt voluptatibus corrupti similique atquefuga, sapiente quos esse voluptate, mollitia rem",
   },
   {
     id: 13,
-    name: "Fast & Furious 10",
+    name: "FF 10",
     category: "Thriller",
     rating: "4.4",
     releaseYear: "2015",
-    videoLink: "https://www.youtube.com/watch?v=RzVvThhjAKw",
-
+    videoLink: "https://www.youtube.com/watch?v=JfVOs4VSpmA",
     coverImage:
       "https://i0.wp.com/batman-news.com/wp-content/uploads/2021/12/Black-Adam-Total-Film-Cover-02.jpg?quality=80&strip=info&ssl=1",
     description:
@@ -164,11 +157,11 @@ export const movies = [
   },
   {
     id: 14,
-    name: "The Shawshank Redemption",
+    name: "Shawshank Redemption",
     category: "Thriller",
     rating: "4",
     releaseYear: "2015",
-    videoLink: "https://www.youtube.com/watch?v=RzVvThhjAKw",
+    videoLink: "https://www.youtube.com/watch?v=JfVOs4VSpmA",
     coverImage:
       "https://rukminim1.flixcart.com/image/416/416/k77xx8w0/poster/y/5/k/medium-the-shawshank-redemption-movie-poster-for-room-with-gloss-original-imafphntvxvqsscb.jpeg?q=70",
     description:
@@ -180,7 +173,7 @@ export const movies = [
     category: "Thriller",
     rating: "4.1",
     releaseYear: "2015",
-    videoLink: "https://www.youtube.com/watch?v=RzVvThhjAKw",
+    videoLink: "https://www.youtube.com/watch?v=JfVOs4VSpmA",
     coverImage:
       "https://upload.wikimedia.org/wikipedia/en/thumb/d/d7/RRR_Poster.jpg/220px-RRR_Poster.jpg",
     description:
@@ -192,8 +185,7 @@ export const movies = [
     category: "Romantic",
     rating: "4.4",
     releaseYear: "2020",
-    videoLink: "https://www.youtube.com/watch?v=RzVvThhjAKw",
-
+    videoLink: "https://www.youtube.com/watch?v=JfVOs4VSpmA",
     coverImage:
       "https://i0.wp.com/batman-news.com/wp-content/uploads/2021/12/Black-Adam-Total-Film-Cover-02.jpg?quality=80&strip=info&ssl=1",
     description:
@@ -205,8 +197,7 @@ export const movies = [
     category: "Romantic",
     rating: "5",
     releaseYear: "2020",
-    videoLink: "https://www.youtube.com/watch?v=RzVvThhjAKw",
-
+    videoLink: "https://www.youtube.com/watch?v=JfVOs4VSpmA",
     coverImage:
       "https://cdn.shopify.com/s/files/1/0969/9128/products/MoneyHeist-NetflixTVShowPosterFanArt_e91469e6-1d4b-4e79-82ce-7c3caa3072af.jpg?v=1589268509",
     description:
@@ -218,8 +209,7 @@ export const movies = [
     category: "Romantic",
     rating: "4.2",
     releaseYear: "2020",
-    videoLink: "https://www.youtube.com/watch?v=RzVvThhjAKw",
-
+    videoLink: "https://www.youtube.com/watch?v=JfVOs4VSpmA",
     coverImage:
       "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/ff1b4572800213.5bf4012230ee7.png",
     description:
@@ -231,8 +221,7 @@ export const movies = [
     category: "Romantic",
     rating: "4.4",
     releaseYear: "2020",
-    videoLink: "https://www.youtube.com/watch?v=RzVvThhjAKw",
-
+    videoLink: "https://www.youtube.com/watch?v=JfVOs4VSpmA",
     coverImage: "https://m.media-amazon.com/images/I/61O8KP0CYVS._SY741_.jpg",
     description:
       "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae deleniti saepe dolor unde, tenetur quia amet aliquam sit commodi explicabo hic aspernatur id pariatur ipsum sequi. Minus qui vero similique dignissimos quamvoluptatibus, beatae odit numquam reiciendis blanditiis labore quo pariatur expedita nesciunt, doloremque sequi consequuntur ipsam repellendus est hic accusantium corporis commodi quae iste. Eos in natus esse hic ab iste odio rerum inventore reiciendis iusto harum dolor nobis optio facere eaque minus, veritatis quas nulla, pariatur eligendi officiis? Totam id repellendus debitis assumenda dolores autem iste incidunt voluptatibus corrupti similique atquefuga, sapiente quos esse voluptate, mollitia rem",
@@ -243,8 +232,7 @@ export const movies = [
     category: "Romantic",
     rating: "4.2",
     releaseYear: "2020",
-    videoLink: "https://www.youtube.com/watch?v=RzVvThhjAKw",
-
+    videoLink: "https://www.youtube.com/watch?v=JfVOs4VSpmA",
     coverImage:
       "https://upload.wikimedia.org/wikipedia/sco/2/20/Batman_v_Superman_poster.jpg",
     description:

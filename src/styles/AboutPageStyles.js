@@ -28,11 +28,14 @@ export const ArticleImage = styled.img`
   cursor: pointer;
   border: 1px solid #e50914;
   border-radius: 10px;
+  -webkit-transition: all 0.6s cubic-bezier(0.19, 0, 0.58, 1);
+  transition: all 0.6s cubic-bezier(0.19, 0, 0.58, 1);
 
   :hover {
     -webkit-box-shadow: -1px 3px 41px 0px rgba(255, 0, 0, 1);
     -moz-box-shadow: -1px 3px 41px 0px rgba(255, 0, 0, 1);
     box-shadow: -1px 3px 41px 0px rgba(255, 0, 0, 1);
+    transform: scale(1.1);
   }
 
   @media (min-width: 320px) and (max-width: 480px) {

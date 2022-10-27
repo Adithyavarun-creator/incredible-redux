@@ -22,7 +22,7 @@ const SubscriptionPage = () => {
   const shareFunction = async () => {
     try {
       await navigator.share({
-        text: "Follow this subscription for watcing free movies",
+        text: "Follow this subscription plan for watcing free movies",
         url: url,
       });
     } catch (error) {
@@ -36,7 +36,7 @@ const SubscriptionPage = () => {
 
   return (
     <>
-      <Header title="Check onto variuos plans below" />
+      <Header title="Check onto various plans below" />
       <ShareBox>
         <NavLinks onClick={shareFunction}>
           <span style={{ color: "#1da1f2" }}>Share</span>
@@ -46,7 +46,7 @@ const SubscriptionPage = () => {
         </NavLinks>
       </ShareBox>
       <SubscriptionContainer>
-        <GridBox data-aos="flip-left">
+        <GridBox>
           <PlanBox>
             <span className="planName">Free</span>
           </PlanBox>
@@ -65,7 +65,7 @@ const SubscriptionPage = () => {
             <SignInButton>Sign in</SignInButton>
           </ButtonSubsBox>
         </GridBox>
-        <GridBox data-aos="flip-left">
+        <GridBox>
           <PlanBox>
             <span className="planName">Basic</span>
           </PlanBox>
@@ -84,7 +84,7 @@ const SubscriptionPage = () => {
             <SignInButton>Sign in</SignInButton>
           </ButtonSubsBox>
         </GridBox>
-        <GridBox data-aos="flip-left">
+        <GridBox>
           <PlanBox>
             <span className="planName">Standard</span>
           </PlanBox>

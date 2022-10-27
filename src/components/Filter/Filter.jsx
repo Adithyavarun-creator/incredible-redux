@@ -1,17 +1,26 @@
 import React from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { myFilter } from "../../store/movies/moviesAction";
+import {
+  filterMovies,
+  selectAllMovies,
+} from "../../store/movies/moviesSelector";
 import { FilterContainer, FilterButton } from "../../styles/FilterStyle";
 
-const Filter = ({ movies, filterItem, setMoviesList }) => {
+const Filter = ({ filterItem }) => {
+  const dispatch = useDispatch();
+  const allMovies = useSelector(selectAllMovies);
+
+  const clickAction = () => dispatch(myFilter(allMovies, "Action"));
+
+  console.log(allMovies);
+
   return (
     <FilterContainer>
-      <FilterButton onClick={() => setMoviesList(movies)}>All</FilterButton>
-      <FilterButton onClick={() => filterItem("Action")}>Action</FilterButton>
-      <FilterButton onClick={() => filterItem("Thriller")}>
-        Thriller
-      </FilterButton>
-      <FilterButton onClick={() => filterItem("Romantic")}>
-        Romantic
-      </FilterButton>
+      <FilterButton>All</FilterButton>
+      <FilterButton onClick={clickAction}>Action</FilterButton>
+      <FilterButton>Thriller</FilterButton>
+      <FilterButton>Romantic</FilterButton>
     </FilterContainer>
   );
 };

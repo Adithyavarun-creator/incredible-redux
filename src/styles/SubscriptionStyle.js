@@ -28,6 +28,14 @@ export const SubscriptionContainer = styled.div`
     row-gap: 45px;
     padding: 5px 5px;
   }
+
+  @media (min-width: 768px) and (max-width: 1024px) {
+    display: grid;
+    grid-template-columns: 280px;
+    column-gap: 40px;
+    row-gap: 40px;
+    justify-content: center;
+  }
 `;
 
 export const GridBox = styled.div`
@@ -38,6 +46,11 @@ export const GridBox = styled.div`
   @media (min-width: 320px) and (max-width: 480px) {
     border: 1px solid #e50914;
     height: 420px;
+  }
+
+  @media (min-width: 768px) and (max-width: 1024px) {
+    /* border: 1px solid #e50914;
+    height: 420px; */
   }
 
   :hover {

@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { movies } from "../../movieData/movies";
 import {
   MoviePageContainer,
   ShareLinkBox,
@@ -8,11 +7,16 @@ import {
 import { BsShareFill } from "react-icons/bs";
 import BackButton from "../BackButton/BackButton";
 import ReactPlayer from "react-player";
-
+import { movies } from "../../movieData/movies";
+import { useDispatch, useSelector } from "react-redux";
+import { getMovie } from "../../store/movies/moviesAction";
 
 const MovieDetail = () => {
-  const { id } = useParams();
   const [movie, setMovie] = useState({});
+
+  const { id } = useParams();
+  const oneProduct = useSelector((state) => state.singleMovie);
+  const dispatch = useDispatch();
 
   const url = `https://incredible-indol.vercel.app/movie/${id}`;
 
@@ -33,9 +37,15 @@ const MovieDetail = () => {
     }
   };
 
+  const findMovie = () => {
+    const one = movies.find((movie) => movie.id === parseInt(id));
+    dispatch(getMovie(one));
+  };
+
   useEffect(() => {
-    const findMovie = movies.find((movie) => movie.id === parseInt(id));
-    setMovie(findMovie);
+    // const findMovie = movies.find((movie) => movie.id === parseInt(id));
+    // setMovie(findMovie);
+    if (id && id !== "") findMovie();
 
     window.scrollTo(0, 0);
   }, [id]);
@@ -43,20 +53,20 @@ const MovieDetail = () => {
   return (
     <>
       <MoviePageContainer>
-        {!movie ? (
+        {!oneProduct ? (
           "Loading "
         ) : (
           <>
             <div className="pageContainer">
               <img
-                src={movie.coverImage}
+                src={oneProduct.coverImage}
                 className="coverAllImage"
-                alt={movie.name}
+                alt={oneProduct.name}
               />
 
               <div className="desc">
                 <BackButton link="/" text="Go Back" />
-                <h1 className="movieName">{movie.name}</h1>
+                <h1 className="movieName">{oneProduct.name}</h1>
 
                 <ShareLinkBox onClick={shareMovie}>
                   <span style={{ color: "#1da1f2" }}>Share</span>
@@ -65,20 +75,25 @@ const MovieDetail = () => {
                   </span>
                 </ShareLinkBox>
 
-                <h2 className="movieYear">Released on {movie.releaseYear}</h2>
+                <h2 className="movieYear">
+                  Released on {oneProduct.releaseYear}
+                </h2>
                 <ReactPlayer
-                  url="https://www.youtube.com/watch?v=ysz5S6PUM-U"
+                  url={oneProduct.videoLink}
                   width="100%"
-                  height="400px"
+                  height="600px"
                   className="videoPlayer"
+                  playbackRate={1}
+                  controls={true}
+                  light={true}
                 />
 
-                <h3 className="movieDes">{movie.description}</h3>
+                <h3 className="movieDes">{oneProduct.description}</h3>
               </div>
             </div>
           </>
         )}
-      </MoviePageContainer>
+      </MoviePageContainer>{" "}
     </>
   );
 };
