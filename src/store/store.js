@@ -10,7 +10,6 @@ const persistConfig = {
   key: "root",
   storage: storage,
   blacklist: ["movies"],
-  //because user comes from auth and not from reducer
 };
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);

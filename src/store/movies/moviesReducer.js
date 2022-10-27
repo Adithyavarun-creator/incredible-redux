@@ -26,11 +26,11 @@ export const moviesReducer = (state = MOVIES_INITIAL_STATE, action) => {
         filteredMovies: payload,
       };
 
-    // case MovieActionTypes.FILTER_YEAR:
-    //   return {
-    //     ...state,
-    //     filteredMovies: payload,
-    //   };
+    case MovieActionTypes.FILTER_YEAR:
+      return {
+        ...state,
+        filteredMovies: payload,
+      };
 
     default:
       return state;

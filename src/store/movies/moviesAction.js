@@ -13,9 +13,9 @@ const filterRatings = (movies, rating) => {
   return newMovies;
 };
 
-const filterYear = (movies, yearLook) => {
+const filterYear = (movies, year) => {
   const newMovies = movies.filter(
-    (movie) => Number(movie.year) === Number(yearLook)
+    (movie) => Number(movie.releaseYear) === Number(year)
   );
   return newMovies;
 };
